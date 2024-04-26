@@ -8,9 +8,54 @@ datasource db {
 }
 
 model gebruiker {
-  id             Int     @id @default(autoincrement())
-  gebruikersnaam String  @db.VarChar(50)
-  wachtwoord     String  @db.VarChar(255)
-  rol            String? @db.VarChar(20)
-  salt           String? @db.VarChar(20)
+  id              Int      @id @default(autoincrement())
+  gebruikersnaam  String   @db.VarChar(50)
+  wachtwoord      String   @db.VarChar(255)
+  rol             String?  @db.VarChar(20)
+  salt            String?  @db.VarChar(20)
+  volwassenen     Int?
+  kinderen        Int?
+  dieren          Int?
+  dierengewend    Boolean?
+  typewoning      String?  @db.VarChar(50)
+  tuin            Boolean?
+  toestemming     Boolean?
+  verblijf        String?  @db.VarChar(50)
+  opvangverblijf  String?  @db.VarChar(50)
+  alleenthuis     String?  @db.VarChar(50)
+  ervaringmetdier Boolean?
+  verwachtingen   String?  @db.VarChar(360)
+}
+
+model adoptieform {
+  id                   Int      @id @default(autoincrement())
+  gebruikerid          Int?
+  aantalmenseningezien Int?
+  kinderen             Int?
+  andereDieren         Boolean?
+  heeftTuin            Boolean?
+  isHuurder            Boolean?
+  tijdDierAlleenThuis  String?  @db.VarChar(50)
+  heeftReedsErvaring   Boolean?
+  verwachtingen        String?  @db.Text
+  voorkeuren           String?  @db.Text
+
+  @@index([gebruikerid], map: "gebruikerid")
+}
+
+model dier {
+  id             Int      @id @default(autoincrement())
+  naam           String?  @db.VarChar(50)
+  soort          String?  @db.VarChar(20)
+  ras            String?  @db.VarChar(50)
+  geslacht       String?  @db.VarChar(50)
+  geboortedatum  String?  @db.VarChar(50)
+  opmerkingen    String?  @db.VarChar(380)
+  datuminasiel   String?  @db.VarChar(50)
+  jongekinderen  Boolean?
+  ouderekinderen Boolean?
+  anderekatten   Boolean?
+  anderehonden   Boolean?
+  tuinnodig      Boolean?
+  sociaal        String?  @db.VarChar(50)
 }

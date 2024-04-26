@@ -32,7 +32,6 @@ module.exports = function installMiddelwares(app) {
           error,
         }
       );
-  
       throw error;
     }
   });
