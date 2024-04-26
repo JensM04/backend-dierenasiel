@@ -2,6 +2,7 @@
 const { PrismaClient } = require('@prisma/client');
 
 const { getLogger } = require('../core/logging');
+const seed = require('../../prisma/seed')
 
 //const NODE_ENV = config.get('env');
 //const isDevelopment = NODE_ENV === 'development';
@@ -11,7 +12,7 @@ const prisma = new PrismaClient();
 async function initializeData() {
   const logger = getLogger();
   logger.info('Initializing connection to the database');
-  prisma.$connect();
+  //prisma.$connect();
 
   // Check the connection
   try {
@@ -22,7 +23,8 @@ async function initializeData() {
   }
 
   //seed the database
-  //TODO
+  //TOD
+  //seed();
 
   logger.info('Succesfully connected to the database');
 }

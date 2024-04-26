@@ -41,19 +41,6 @@ module.exports = function installMiddelwares(app) {
 
   app.use(koaHelmet());
 
-  // const jwtCheck = auth({
-  //   audience: 'http://vichogent.be:40058',
-  //   issuerBaseURL: 'https://dev-tn8zletgowdpmihm.us.auth0.com/',
-  //   tokenSigningAlg: 'RS256'
-  // });
-  
-  // // enforce on all endpoints
-  // app.use(jwtCheck);
-  
-  // app.get('/authorized', function (req, res) {
-  //     res.send('Secured Resource');
-  // });
-
   app.use(async (ctx, next) => {
   getLogger().info(JSON.stringify(ctx.request));
   getLogger().info(JSON.stringify(ctx.request.body));
