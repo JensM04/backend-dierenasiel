@@ -40,6 +40,11 @@ const getById = async (ctx) => {
     ctx.body = dier;
 };
 
+
+const getSwiped = async (ctx) => {
+    const dier = await dierService.getSwiped(Number(ctx.params.id))
+}
+
 module.exports = (app) => {
   const router = new Router({
     prefix: '/dieren',

@@ -24,7 +24,7 @@ async function initializeData() {
 
   //seed the database
   //TOD
-  seed();
+  // seed();
 
   logger.info('Succesfully connected to the database');
 }

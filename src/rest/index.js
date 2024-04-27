@@ -2,6 +2,7 @@ const Router = require('@koa/router');
 
 const installUserRouter = require('./user');
 const installDierRouter = require('./dier');
+const installAdoptieRouter = require('./adoptieform');
 /**
  * Install all routes in the given Koa application.
  *
@@ -15,6 +16,7 @@ module.exports = (app) => {
   //import routes
   installUserRouter(router);
   installDierRouter(router);
+  installAdoptieRouter(router);
 
   app.use(router.routes())
      .use(router.allowedMethods());
