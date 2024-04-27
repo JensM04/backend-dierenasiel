@@ -50,7 +50,7 @@ async function seed() {
 
     const fluffyCat = await prisma.dier.create({
       data: {
-        naam: 'Alma',
+        naam: 'Simba',
         soort: 'Cat',
         ras: 'Persian',
         geslacht: 'Female',
