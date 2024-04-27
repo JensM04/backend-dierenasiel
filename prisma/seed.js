@@ -50,10 +50,10 @@ async function seed() {
 
     const fluffyCat = await prisma.dier.create({
       data: {
-        naam: 'Fluffy',
+        naam: 'Alma',
         soort: 'Cat',
         ras: 'Persian',
-        geslacht: 'Male',
+        geslacht: 'Female',
         geboortedatum: '2020-01-01',
         opmerkingen: 'Friendly and playful',
         datuminasiel: '2021-03-15',
@@ -69,7 +69,7 @@ async function seed() {
         // Add more cats
         const cat1 = await prisma.dier.create({
             data: {
-              naam: 'Whiskers',
+              naam: 'Yvette',
               soort: 'Cat',
               ras: 'Siamese',
               geslacht: 'Female',
@@ -87,10 +87,10 @@ async function seed() {
       
           const cat2 = await prisma.dier.create({
             data: {
-              naam: 'Mittens',
+              naam: 'Daisy',
               soort: 'Cat',
               ras: 'Maine Coon',
-              geslacht: 'Male',
+              geslacht: 'Female',
               geboortedatum: '2018-12-03',
               opmerkingen: 'Gentle giant, very friendly',
               datuminasiel: '2019-03-25',
@@ -106,9 +106,9 @@ async function seed() {
           // Add more dogs
           const dog1 = await prisma.dier.create({
             data: {
-              naam: 'Buddy',
+              naam: 'Lizzy',
               soort: 'Dog',
-              ras: 'Golden Retriever',
+              ras: 'CV Dobberman',
               geslacht: 'Male',
               geboortedatum: '2017-07-15',
               opmerkingen: 'Very friendly and loves to play fetch',
@@ -124,10 +124,10 @@ async function seed() {
       
           const dog2 = await prisma.dier.create({
             data: {
-              naam: 'Luna',
+              naam: 'Max',
               soort: 'Dog',
-              ras: 'Labrador Retriever',
-              geslacht: 'Female',
+              ras: 'Mechelse herder',
+              geslacht: 'Male',
               geboortedatum: '2019-03-08',
               opmerkingen: 'Loyal and loves outdoor activities',
               datuminasiel: '2020-01-15',
